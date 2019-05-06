@@ -109,4 +109,23 @@ describe("move the robot UP, DOWN, LEFT or RIGHT", () => {
         .toEqual(newTable)
     );
   });
-});
+
+  describe("robot REPORT", () => {
+    test("test case 1: robot is in the table", () => {
+      let [x, y, f] = [2, 3, 4];
+      let newTable = [
+        ["O", "O", "O", "O", "O"],
+        ["O", "O", "O", "O", "^"],
+        ["O", "O", "O", "O", "O"],
+        ["O", "O", "O", "O", "O"],
+        ["O", "O", "O", "O", "O"]
+      ];
+      let report = [1,4, 'NORTH']
+  
+      expect(table.placeRobot(x, y, f).move().moveUp().report().toEqual(report));
+    });
+    test("test case 2: Robot is not in the table", () => {
+      let report = [];
+      expect(table.move().moveUp().report().toEqual(report));
+    });
+  });
