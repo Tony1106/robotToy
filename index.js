@@ -7,25 +7,51 @@ let table = [
   ["O", "O", "O", "O", "O"]
 ];
 
-//Declare variable
-let direction = [
-  { value: 1, key: "North", symbol: "^" },
-  { value: 2, key: "South", symbol: "⌄" },
-  { value: 3, key: "West", symbol: "<" },
-  { value: 4, key: "East", symbol: ">" }
-];
+class Table {
+  constructor(x, y) {
+    this._x = x - 1;
+    this._y = y - 1;
+    this.robot = [];
+    this.table = [];
+    this.isValidData = true;
+  }
+  create() {
+    let length = [];
+    this.robot = [0, 0, "NORTH"];
+    for (let i = 0; i <= this._x; i++) {
+      length.push("O");
+    }
+    for (let j = 0; j <= this._y; j++) {
+      this.table.push(length);
+    }
+    return this;
+  }
+}
 
-//Display the table on console
-console.log(" ");
-console.log(" ");
-console.log(["-", "-", "North", "-", "-"]);
-console.log(" ");
-console.log(" ");
-table.map(item => console.log(item));
-console.log(" ");
-console.log(" ");
-console.log(["-", "-", "South", "-", "-"]);
-console.log(" ");
-console.log(" ");
-let [x, y, f] = [2, 3, 4];
-console.log(x, y, f);
+Table.prototype.validation = require("./components/validation");
+Table.prototype.place = require("./components/place");
+Table.prototype.move = require("./components/move");
+Table.prototype.report = require("./components/report");
+
+let newTable = new Table(5, 5);
+newTable
+  .create()
+  .place(2, 3, "NORTH")
+  .move()
+  .move()
+  .report();
+
+// //Display the table on console
+// console.log(" ");
+// console.log(" ");
+// console.log(["WEST<--", "North", "-->EAST"]);
+// console.log(" ");
+// console.log(" ");
+// table.map(item => console.log(item));
+// console.log(" ");
+// console.log(" ");
+// console.log(["WEST<--", "South", "-->EAST"]);
+// console.log(" ");
+// console.log(" ");
+// let [x, y, f] = [2, 3, 4];
+// console.log(x, y, f);
