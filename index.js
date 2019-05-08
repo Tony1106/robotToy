@@ -31,7 +31,6 @@ class Table {
   }
 }
 
-Table.prototype.validation = require("./components/validation");
 Table.prototype.place = require("./components/place");
 Table.prototype.move = require("./components/move");
 Table.prototype.report = require("./components/report");
@@ -39,21 +38,6 @@ Table.prototype.report = require("./components/report");
 let newTable = new Table(5, 5);
 newTable
   .create()
-  .place(2, 3, "WEST")
-  .move("SOUTH")
+  .place(0, 0, "NORTH")
+  .move("WEST")
   .report();
-
-// //Display the table on console
-// console.log(" ");
-// console.log(" ");
-// console.log(["WEST<--", "North", "-->EAST"]);
-// console.log(" ");
-// console.log(" ");
-// table.map(item => console.log(item));
-// console.log(" ");
-// console.log(" ");
-// console.log(["WEST<--", "South", "-->EAST"]);
-// console.log(" ");
-// console.log(" ");
-// let [x, y, f] = [2, 3, 4];
-// console.log(x, y, f);

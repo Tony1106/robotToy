@@ -30,6 +30,8 @@ module.exports = function move(input) {
         case "WEST":
         case "LEFT":
           robot = left(robot);
+          console.log(robot);
+
           if (validation.preventFall(robot)) {
             this.robot = robot;
           }
