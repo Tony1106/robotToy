@@ -9,9 +9,6 @@ module.exports = function place(x, y, f) {
       y,
       f
     };
-    this.table[x][y] = "*";
-    console.log(this.robot);
-    console.log(this.table);
   }
   return this;
 };
