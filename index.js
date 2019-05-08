@@ -21,7 +21,6 @@ class Table {
   }
   create() {
     let length = [];
-    this.robot = [0, 0, "NORTH"];
     for (let i = 0; i <= this._x; i++) {
       length.push("O");
     }
@@ -40,8 +39,8 @@ Table.prototype.report = require("./components/report");
 let newTable = new Table(5, 5);
 newTable
   .create()
-  .place(2, 3, "NORTH")
-  .move("helloe")
+  .place(2, 3, "WEST")
+  .move("SOUTH")
   .report();
 
 // //Display the table on console

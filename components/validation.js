@@ -34,31 +34,34 @@ module.exports = class Validation {
     } else return true;
   }
   preventFall(robot) {
-    let x = robot[0];
-    let y = robot[1];
-    console.log(this._tableX, x);
-
-    if (x > this._tableX || x < 0) {
-      return false;
-    } else if (y > this._tableY || y < 0) {
-      return false;
-    } else return true;
+    let x = robot.x;
+    let y = robot.y;
+    let f = robot.f;
+    if (x <= this._tableX && x >= 0 && y <= this._tableY && y >= 0) {
+      return true;
+    } else return false;
   }
   movement(input) {
-    let direction = ["NORTH", "SOUTH", "WEST", "EAST"];
+    let direction = [
+      "NORTH",
+      "SOUTH",
+      "WEST",
+      "EAST",
+      "UP",
+      "DOWN",
+      "LEFT",
+      "RIGHT"
+    ];
 
     if (typeof input == "string") {
       input = input.toUpperCase();
       if (!direction.includes(input)) {
         console.log(
-          "Please input the string of the direction: NORTH, SOUTH, WEST,EAST or let it emplty"
+          "Please input the string of the direction: NORTH, SOUTH, WEST,EAST or let it empty"
         );
         return false;
       } else return true;
     } else {
-      console.log(
-        "Please input the string of the direction: NORTH, SOUTH, WEST,EAST or let it emplty"
-      );
       return false;
     }
   }
