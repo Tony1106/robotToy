@@ -1,8 +1,29 @@
 //Declare variable
-let direction = [
-  { value: 1, key: "NORTH", symbol: "^" },
-  { value: 2, key: "SOUTH", symbol: "⌄" },
-  { value: 3, key: "WEST", symbol: "<" },
-  { value: 4, key: "EAST", symbol: ">" }
-];
-module.exports = { direction };
+
+let direction = {
+  North: {
+    value: 1,
+    key: "NORTH",
+    direction: "UP",
+    symbol: "^"
+  },
+  South: {
+    value: 2,
+    key: "SOUTH",
+    direction: "DOWN",
+    symbol: "⌄"
+  },
+  West: {
+    value: 3,
+    key: "WEST",
+    direction: "LEFT",
+    symbol: "<"
+  },
+  East: {
+    value: 4,
+    key: "EAST",
+    direction: "RIGHT",
+    symbol: ">"
+  }
+};
+module.exports = direction;

@@ -4,7 +4,7 @@ module.exports = class Validation {
     this._tableY = tableY;
   }
   validate(x, y, f) {
-    const { direction } = require("../variable");
+    const direction = require("../variable");
     if (x < 0 || x > this._tableX) {
       console.log(
         "Your Robot place X in is not valid. Must be between " +
@@ -22,10 +22,10 @@ module.exports = class Validation {
       );
       return false;
     } else if (
-      f !== direction[0].key &&
-      f !== direction[1].key &&
-      f !== direction[2].key &&
-      f !== direction[3].key
+      f !== direction.North.key &&
+      f !== direction.South.key &&
+      f !== direction.West.key &&
+      f !== direction.East.key
     ) {
       console.log(
         "Please input the right direction of the Robot. MUST be NORTH SOUTH WEST or EAST"
@@ -43,5 +43,23 @@ module.exports = class Validation {
     } else if (y > this._tableY || y < 0) {
       return false;
     } else return true;
+  }
+  movement(input) {
+    let direction = ["NORTH", "SOUTH", "WEST", "EAST"];
+
+    if (typeof input == "string") {
+      input = input.toUpperCase();
+      if (!direction.includes(input)) {
+        console.log(
+          "Please input the string of the direction: NORTH, SOUTH, WEST,EAST or let it emplty"
+        );
+        return false;
+      } else return true;
+    } else {
+      console.log(
+        "Please input the string of the direction: NORTH, SOUTH, WEST,EAST or let it emplty"
+      );
+      return false;
+    }
   }
 };

@@ -4,9 +4,12 @@ module.exports = function place(x, y, f) {
   console.log(validate, x, y, f, this._x, this._y);
 
   if (validate) {
-    this.robot = [x, y, f];
-    let table = this.table;
-    table[x][y] = "*";
+    this.robot = {
+      x,
+      y,
+      f
+    };
+    this.table[x][y] = "*";
     console.log(this.robot);
     console.log(this.table);
     return this;

@@ -11,7 +11,11 @@ class Table {
   constructor(x, y) {
     this._x = x - 1;
     this._y = y - 1;
-    this.robot = [];
+    this.robot = {
+      x: 0,
+      y: 0,
+      f: "NORTH"
+    };
     this.table = [];
     this.isValidData = true;
   }
@@ -37,8 +41,7 @@ let newTable = new Table(5, 5);
 newTable
   .create()
   .place(2, 3, "NORTH")
-  .move()
-  .move()
+  .move("helloe")
   .report();
 
 // //Display the table on console

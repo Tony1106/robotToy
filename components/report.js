@@ -1,10 +1,10 @@
 module.exports = function() {
   console.log(
     "The position of the Robot is: X: " +
-      this.robot[0] +
+      this.robot.x +
       " Y: " +
-      this.robot[1] +
+      this.robot.y +
       " and it face " +
-      this.robot[2]
+      this.robot.f
   );
 };
