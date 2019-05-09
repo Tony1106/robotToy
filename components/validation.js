@@ -33,10 +33,11 @@ module.exports = class Validation {
       return false;
     } else return true;
   }
-  preventFall(robot) {
+  isOnTheTable(robot) {
     let x = robot.x;
     let y = robot.y;
     let f = robot.f;
+    console.log("Robot hit the wall");
     if (x <= this._tableX && x >= 0 && y <= this._tableY && y >= 0) {
       return true;
     } else return false;

@@ -2,33 +2,25 @@ const direction = require("../variable");
 function down(robot) {
   let x = robot.x;
   let y = robot.y;
-  let f = direction.South.key;
   robot.y = y - 1;
-  robot.f = f;
   return robot;
 }
 function up(robot) {
   let x = robot.x;
   let y = robot.y;
-  let f = direction.North.key;
   robot.y = y + 1;
-  robot.f = f;
   return robot;
 }
 function left(robot) {
   let x = robot.x;
   let y = robot.y;
-  let f = direction.West.key;
   robot.x = x - 1;
-  robot.f = f;
   return robot;
 }
 function right(robot) {
   let x = robot.x;
   let y = robot.y;
-  let f = direction.East.key;
   robot.x = x + 1;
-  robot.f = f;
   return robot;
 }
 function autoMove(robot) {
@@ -45,10 +37,10 @@ function autoMove(robot) {
       y--;
       break;
     case direction.East.key:
-      x--;
+      x++;
       break;
     case direction.West.key:
-      x++;
+      x--;
       break;
     default:
       break;
