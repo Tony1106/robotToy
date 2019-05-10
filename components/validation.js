@@ -5,6 +5,7 @@ module.exports = class Validation {
   }
   validate(x, y, f) {
     const direction = require("../variable");
+    f = f.toUpperCase();
     if (x < 0 || x > this._tableX) {
       console.log(
         "Your Robot place X in is not valid. Must be between " +
@@ -37,10 +38,13 @@ module.exports = class Validation {
     let x = robot.x;
     let y = robot.y;
     let f = robot.f;
-    console.log("Robot hit the wall");
+
     if (x <= this._tableX && x >= 0 && y <= this._tableY && y >= 0) {
       return true;
-    } else return false;
+    } else {
+      console.log("Robot hit the wall");
+      return false;
+    }
   }
   movement(input) {
     let direction = [

@@ -3,6 +3,7 @@ module.exports = function place(x, y, f) {
   const validate = new Validation(this._x, this._y).validate(x, y, f);
 
   if (validate) {
+    f = f.toUpperCase();
     this.robot = {
       x,
       y,

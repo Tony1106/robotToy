@@ -52,7 +52,6 @@ module.exports = function move(input) {
         default:
           break;
       }
-      return this;
     }
   } else {
     const { autoMove } = require("./movement");
@@ -62,6 +61,6 @@ module.exports = function move(input) {
     if (validation.isOnTheTable(robot)) {
       this.robot = robot;
     }
-    return this;
   }
+  return this;
 };

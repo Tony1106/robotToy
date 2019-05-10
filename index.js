@@ -36,11 +36,4 @@ Table.prototype.move = require("./components/move");
 Table.prototype.report = require("./components/report");
 Table.prototype.print = require("./components/print");
 
-let newTable = new Table(5, 5);
-newTable
-  .move("left")
-  .move()
-  .move()
-  .report();
-
 module.exports = Table;
