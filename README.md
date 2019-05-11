@@ -6,6 +6,9 @@ Toy Robot Simulator
 
 A robot simulator that you can play with the robot by moving it around the table. It will talk the input from the terminal and print out on the screen.
 
+To make the robot more flexible, I adjust the function MOVE, instead of change the direction only, I will make it change the position as well. To reverse it, just comment those line in my project:
+![alt text](https://imgur.com/Q5oo3Ae)
+
 Clone the project:
 
 ```
@@ -26,13 +29,13 @@ npm run play
 
 ## How to play
 
-###Place the robot on the table
+### Place the robot on the table
 
 - The table size set the default at 5x5.
 - Input the position and the direction of the robot on the table.
 - If the robot gets the wrong input or it not on the table, it will automatically set the default position of the robot is {x: 0, y: 0, f: North}.
 
-###Move the robot
+### Move the robot
 
 - Simply move the robot by your input.
 - Hit the ENTER to move the robot 1 unit in the same direction of the robot.
@@ -58,7 +61,7 @@ npm run test
 - `place(x,y,f)`: place the robot on the table take a position: x,y and direction f.
 - `move(direction)`: move the robot by the direction. The argument `direction` can take UP, DOWN, LEFT, RIGHT or NORTH, SOUTH, WEST, EAST to move the robot or just leave it empty to move the robot 1 unit as its direction.
 - `report()`: print the position of the robot to the screen.
-- `print()`: print the whole table out the see the robot. The robot will have the symbol: `^ > < ⌄` the show its direction.
+- `print()`: print the whole table out the see the robot. The robot will have the symbol: `^ > < ⌄` the show its direction. Require to run the `create()` first.
 
 ![alt text](https://imgur.com/tbtITnZ)
 
@@ -71,13 +74,3 @@ npm run test
 
 - Git: https://github.com/Tony1106
 - Phone: 0449 701 109
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
