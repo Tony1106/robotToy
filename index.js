@@ -1,11 +1,4 @@
-//X, Y start from 0 to 4 on the table
-let table = [
-  ["O", "O", "O", "O", "O"],
-  ["O", "O", "O", "O", "O"],
-  ["O", "O", "O", "O", "O"],
-  ["O", "O", "O", "O", "O"],
-  ["O", "O", "O", "O", "O"]
-];
+//X, Y count from 0 on the table
 
 class Table {
   constructor(x, y) {
@@ -21,16 +14,21 @@ class Table {
   }
   create() {
     let length = [];
-    for (let i = 0; i <= this._x; i++) {
-      length.push("O");
+    if (this._x > 0 && this._y > 0) {
+      for (let i = 0; i <= this._x; i++) {
+        length.push("O");
+      }
+      for (let j = 0; j <= this._y; j++) {
+        this.table.push(length);
+      }
+    } else {
+      console.log("Wrong size of the table");
     }
-    for (let j = 0; j <= this._y; j++) {
-      this.table.push(length);
-    }
+
     return this;
   }
 }
-
+//Register the function of the robot below:
 Table.prototype.place = require("./components/place");
 Table.prototype.move = require("./components/move");
 Table.prototype.report = require("./components/report");

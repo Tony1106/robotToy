@@ -42,7 +42,7 @@ npm run play
 - Hit the ENTER to move the robot 1 unit in the same direction of the robot.
 - Input UP, DOWN, LEFT, RIGHT to move the robot 1 unit UP, DOWN, LEFT, RIGHT. It will change the direction and position of the robot.
 - It will ignore the movement if the wrong input.
-  -It will only change the direction if the robot hit the wall.
+- It will only change the direction if the robot hit the wall.
 
 ## Running the tests
 
