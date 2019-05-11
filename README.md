@@ -7,7 +7,8 @@ Toy Robot Simulator
 A robot simulator that you can play with the robot by moving it around the table. It will talk the input from the terminal and print out on the screen.
 
 To make the robot more flexible, I adjust the function MOVE, instead of change the direction only, I will make it change the position as well. To reverse it, just comment those line in my project:
-![alt text](https://imgur.com/Q5oo3Ae)
+
+<img src="https://imgur.com/Q5oo3Ae" >
 
 Clone the project:
 
@@ -63,7 +64,15 @@ npm run test
 - `report()`: print the position of the robot to the screen.
 - `print()`: print the whole table out the see the robot. The robot will have the symbol: `^ > < ⌄` the show its direction. Require to run the `create()` first.
 
-![alt text](https://imgur.com/tbtITnZ)
+<img src="https://imgur.com/tbtITnZ" >
+
+## Add more function to the robot
+
+To make the robot more functionality, simply just add more method in the `component` folder and register a new method at the `index.js` by using prototype:
+
+```
+Table.prototype.method = require("./components/mothod");
+```
 
 ## Authors
 
