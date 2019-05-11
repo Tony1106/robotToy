@@ -8,8 +8,7 @@ A robot simulator that you can play with the robot by moving it around the table
 
 To make the robot more flexible, I adjust the function MOVE, instead of change the direction only, I will make it change the position as well. To reverse it, just comment those line in my project:
 
-[img]https://i.imgur.com/Q5oo3Ae.png[/img]
-![1](./images/1.jpg)
+![img](https://i.imgur.com/Q5oo3Ae.png)
 
 Clone the project:
 
@@ -65,7 +64,7 @@ npm run test
 - `report()`: print the position of the robot to the screen.
 - `print()`: print the whole table out the see the robot. The robot will have the symbol: `^ > < ⌄` the show its direction. Require to run the `create()` first.
 
-<img src="https://imgur.com/tbtITnZ" >
+![img](https://i.imgur.com/tbtITnZ.png)
 
 ## Add more function to the robot
 
