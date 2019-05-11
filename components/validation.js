@@ -3,7 +3,8 @@ module.exports = class Validation {
     this._tableX = tableX;
     this._tableY = tableY;
   }
-  validate(x, y, f) {
+  //Validate the place()
+  place(x, y, f) {
     const direction = require("../variable");
     f = f && f.toUpperCase();
     if (x < 0 || x > this._tableX) {
@@ -34,6 +35,7 @@ module.exports = class Validation {
       return false;
     } else return true;
   }
+  //Validate if the robot hit the wall
   isOnTheTable(robot) {
     let x = robot.x;
     let y = robot.y;
@@ -46,6 +48,7 @@ module.exports = class Validation {
       return false;
     }
   }
+  //Validate when take input direction
   movement(input) {
     let direction = [
       "NORTH",

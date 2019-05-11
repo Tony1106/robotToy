@@ -20,6 +20,7 @@ module.exports = function move(input) {
           if (validation.isOnTheTable(robot)) {
             this.robot = robot;
           }
+          //Always change the direction of the robot when receive a movement
           this.robot.f = direction.North.key;
           break;
         case "SOUTH":
