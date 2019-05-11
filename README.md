@@ -9,6 +9,7 @@ A robot simulator that you can play with the robot by moving it around the table
 To make the robot more flexible, I adjust the function MOVE, instead of change the direction only, I will make it change the position as well. To reverse it, just comment those line in my project:
 
 [img]https://i.imgur.com/Q5oo3Ae.png[/img]
+![1](./images/1.jpg)
 
 Clone the project:
 
